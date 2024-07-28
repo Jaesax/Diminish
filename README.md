@@ -1,4 +1,6 @@
-# Diminish (Discontinued)
+# Diminish (Edited by Jaesa)
+
+**Note 2:** This is my first release and by no means I'm good at programming. Just trying to fix my own interface and sharing this with you guys. Create a pull request if you have improvements, thanks. I will fix / add missing spells that cause a DR if necessary... and ofc all credits go to Wardz.
 
 Diminish attaches icons to unit frames or nameplates, displaying time left until a [diminishing returns](https://wow.gamepedia.com/Diminishing_returns) category expires for that unit. As well as how far the category is diminished. *(Green border = 50% duration, yellow = 25%, red = 0%)*
   
