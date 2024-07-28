@@ -28,16 +28,16 @@ function Diminish:ToggleUnitEvent(events, enable)
         if enable then
             if not self:IsEventRegistered(event) then
                 self:RegisterEvent(event)
-                --@debug@
+                --[==[@debug@
                 NS.Debug("Registered %s for instance %s.", event, self.currInstanceType)
-                --@end-debug@
+                --@end-debug@]==]
             end
         else
             if self:IsEventRegistered(event) then
                 self:UnregisterEvent(event)
-                --@debug@
+                --[==[@debug@
                 NS.Debug("Unregistered %s for instance %s.", event, self.currInstanceType)
-                --@end-debug@
+                --@end-debug@]==]
             end
         end
     end
@@ -153,9 +153,9 @@ function Diminish:Disable()
     self:RegisterEvent("CVAR_UPDATE")
     Timers:ResetAll(true)
 
-    --@debug@
+    --[==[@debug@
     Info("Disabled addon for zone %s.", self.currInstanceType)
-    --@end-debug@
+    --@end-debug@]==]
 end
 
 function Diminish:Enable()
@@ -164,9 +164,9 @@ function Diminish:Enable()
     self:SetCLEUWatchVariables()
     self:GROUP_ROSTER_UPDATE()
     self:RegisterEvent("COMBAT_LOG_EVENT_UNFILTERED")
-    --@debug@
+    --[==[@debug@
     Info("Enabled addon for zone %s.", self.currInstanceType)
-    --@end-debug@
+    --@end-debug@]==]
 end
 
 function Diminish:InitDB()

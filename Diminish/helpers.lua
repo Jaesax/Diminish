@@ -1,7 +1,7 @@
 local _, NS = ...
 
 -- luacheck: push ignore
---@debug@
+--[==[@debug@
 NS.Debug = function(...)
     if false then print("|cFFFF0000[D]|r" .. format(...)) end
 end
@@ -9,7 +9,7 @@ end
 NS.Info = function(...)
     if false then print("|cFFFF0000[I]|r" .. format(...)) end
 end
---@end-debug@
+--@end-debug@]==]
 -- luacheck: pop
 
 -- Copies table values from src to dst if they don't exist in dst

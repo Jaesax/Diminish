@@ -54,7 +54,14 @@ local function CreateChildPanel(self, name, callback)
         panel.name = name
         panel.parent = self.name
         panel.frames = {}
-        InterfaceOptions_AddCategory(panel)
+        
+		--Settings.RegisterAddOnCategory(Settings.RegisterCanvasLayoutSubcategory(category, panel, frame))
+		--subcategory.ID = frame
+		
+		local category = Settings.GetCategory(panel.parent)
+        local subcategory = Settings.RegisterCanvasLayoutSubcategory(category, panel, panel.name)
+        subcategory.ID = panel.name
+		
         self.lastCreatedChild = panel
 
         callback(panel)
@@ -69,13 +76,18 @@ function Widgets:CreateMainPanel(name)
     self.ADDON_NAME = name
 
     local panel = CreateFrame("Frame", nil, InterfaceOptionsFramePanelContainer)
-    panel.name = name
+    panel.name = "Diminish"
     panel.frames = {}
     panel.CreateChildPanel = CreateChildPanel
     panel:Hide()
 
-    InterfaceOptions_AddCategory(panel)
+	-- Settings.RegisterAddOnCategory(Settings.RegisterCanvasLayoutCategory(panel, panel.name))
+    local category = Settings.RegisterCanvasLayoutCategory(panel, panel.name)
+	category.ID = panel.name
+	Settings.RegisterAddOnCategory(category)
+	
     panel:RegisterEvent("PLAYER_LOGIN") -- panel:SetScript("OnShow", OnShow)
     panel:SetScript("OnEvent", OnShow)
     return panel
 end
+

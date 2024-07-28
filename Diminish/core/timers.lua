@@ -231,9 +231,9 @@ function Timers:ResetAll(clearGUIDs)
         activeGUIDs.player = UnitGUID("player")
     end
 
-    --@debug@
+    --[==[@debug@
     Debug("Stopped all timers.")
-    --@end-debug@
+    --@end-debug@]==]
 end
 
 do
@@ -295,16 +295,16 @@ do
         end
 
         Icons:StartCooldown(timer, origUnitID and "player-party" or unitID, onAuraEnd)
-        --@debug@
+        --[==[@debug@
         Debug("%s timer %s:%s", isUpdate and "Updated" or "Started", origUnitID and "player-party" or unitID, timer.category)
-        --@end-debug@
+        --@end-debug@]==]
     end
 
     local function Stop(timer, unitID, preventRemove, isFinished)
         Icons:StopCooldown(timer, unitID, isFinished)
-        --@debug@
+        --[==[@debug@
         Debug("Stop/pause timer %s:%s", unitID, timer.category or "nil")
-        --@end-debug@
+        --@end-debug@]==]
 
         if not preventRemove then
             -- f.cooldown OnHide script won't trigger :Remove() if the parent (unitframe) is hidden

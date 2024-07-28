@@ -1,6 +1,7 @@
+
 ## Interface: 110000, 110002
 ## IconTexture: Interface\Icons\Spell_nature_doublepolymorph1
-## Title: DiminishOptions|cff99ff33Jaesa
+## Title: Diminish Options |cff99ff33fixed by Jaesa
 ## Notes: Configuration for Diminish.
 ## Version: v2.6.10
 ## Dependencies: Diminish

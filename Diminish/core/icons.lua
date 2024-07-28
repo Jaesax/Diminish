@@ -343,9 +343,9 @@ do
         end
 
         if isNew then
-            --@debug@
+            --[==[@debug@
             NS.Debug("Created new frame for %s:%s", unitID, category)
-            --@end-debug@
+            --@end-debug@]==]
 
             iconCount = iconCount + 1
             frame:SetFrameStrata("HIGH")
@@ -537,9 +537,9 @@ function Icons:ReleaseNameplate(unitID)
         for category, frame in pairs(frames[unitID]) do
             Icons:ReleaseFrame(frame, unitID, nil, category)
         end
-        --@debug@
+        --[==[@debug@
         NS.Debug("Released nameplate %s", unitID)
-        --@end-debug@
+        --@end-debug@]==]
     end
 end
 
