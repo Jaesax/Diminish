@@ -1,12 +1,12 @@
 # Diminish (Edited by Jaesa)
 
 **Note 2:** This is my first release and by no means I'm good at programming. Just trying to fix my own interface and sharing this with you guys. Create a pull request if you have improvements, thanks. I will fix / add missing spells that cause a DR if necessary... and ofc all credits go to Wardz.
+Remember that Wardz is not actively maintaining this addon and in case functions get removed I might not be able to fix it without community help!
 
 Diminish attaches icons to unit frames or nameplates, displaying time left until a [diminishing returns](https://wow.gamepedia.com/Diminishing_returns) category expires for that unit. As well as how far the category is diminished. *(Green border = 50% duration, yellow = 25%, red = 0%)*
   
 Diminish can track DRs on both mobs and players if you enable PvE mode in the options.
 
-**Note:** Diminish is no longer actively maintained. Feel free to fork this addon, but be wary it contains a ~10 year old codebase with lots of hacky methods added over time. Some code might rely on deprecated Blizzard functions that's marked for removal in a future patch.
 (The DR spell database itself has moved over to [DRList-1.0](https://github.com/wardz/drlist-1.0) which is still updated every now and then).
 
 ## Configuration
