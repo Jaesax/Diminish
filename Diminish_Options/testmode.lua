@@ -112,8 +112,8 @@ function TestMode:ToggleArenaAndPartyFrames(state, forceHide)
     local settings = DIMINISH_NS.db.unitFrames
 
     if not DIMINISH_NS.IS_CLASSIC then
-        if not IsAddOnLoaded("Blizzard_ArenaUI") then
-            LoadAddOn("Blizzard_ArenaUI")
+        if not C_AddOns.IsAddOnLoaded("Blizzard_ArenaUI") then
+            C_AddOns.LoadAddOn("Blizzard_ArenaUI")
         end
     end
 

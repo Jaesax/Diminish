@@ -245,7 +245,7 @@ for unitFrame, unit in pairs(NS.unitFrames) do
                         return
                     end
 
-                    local texture = GetSpellTexture(text)
+                    local texture = C_Spell.GetSpellTexture(text)
                     if texture then
                         DIMINISH_NS.db.categoryTextures[self.category] = texture
                     else
@@ -279,7 +279,7 @@ for unitFrame, unit in pairs(NS.unitFrames) do
                     frames.iconPreview:SetParent(nil)
                 end,
                 EditBoxOnTextChanged = function(editbox)
-                    local texture = GetSpellTexture(editbox:GetText())
+                    local texture = C_Spell.GetSpellTexture(editbox:GetText())
                     if texture then
                         frames.iconPreview.icon:SetTexture(texture)
                         editbox:GetParent().button1:Enable()
