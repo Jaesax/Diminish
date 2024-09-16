@@ -1,9 +1,9 @@
 ## Interface: 11502
 ## IconTexture: Interface\Icons\Spell_nature_heavypolymorph1
-## Title: Diminish
+## Title: |cff99ff33Diminish
 ## Notes: Lightweight diminishing returns tracker for hostile and friendly units.
 ## SavedVariables: DiminishDB
-## Version: v2.6.12
+## Version: v2.6.15
 ## X-Curse-Project-ID: 92871
 ## X-Wago-ID: 7nGvPW6x
 
