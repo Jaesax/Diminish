@@ -582,7 +582,13 @@ function Icons:ReleaseFrame(frame, unitID, timer, category)
 end
 
 do
-    local GetSpellTexture = _G.GetSpellTexture
+    local GetSpellTexture = function(...)
+        if _G.GetSpellTexture then
+            return _G.GetSpellTexture(...)
+        elseif C_Spell and C_Spell.GetSpellTexture then
+            return C_Spell.GetSpellTexture(...)
+        end
+    end
     local CATEGORY_TAUNT = NS.CATEGORIES.taunt
     local indicatorColors = NS.DR_STATES_COLORS
     local DR_TIME = NS.DR_TIME
@@ -623,7 +629,7 @@ do
             return frame.icon:SetTexture(NS.db.categoryTextures[timer.category])
         end
 
-        frame.icon:SetTexture(C_Spell.GetSpellTexture(timer.spellID))
+        frame.icon:SetTexture(GetSpellTexture(timer.spellID))
     end
 
     function Icons:StartCooldown(timer, unitID, onAuraEnd)
