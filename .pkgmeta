@@ -3,15 +3,15 @@ enable-toc-creation: yes
 
 externals:
   Diminish_Options/libs/WardzConfigDropdown-1.0: https://github.com/wardz/WardzConfigDropdown-1.0
-  Diminish/libs/LibStub: https://github.com/wardz/LibStub
-  Diminish/libs/DRList-1.0: https://github.com/wardz/DRList-1.0
-
-move-folders:
-  Diminish/Diminish_Options: Diminish_Options
-  Diminish/Diminish: Diminish
+  Diminish/libs/LibStub: https://repos.wowace.com/wow/ace3/trunk/LibStub
+  Diminish/libs/DRList-1.0: https://github.com/wardz/DRList-1.0/tree/master/DRList-1.0
 
 ignore:
   - README.md
   - CHANGELOG.md
   - Diminish/libs/LibStub/LibStub.toc
-  - "Diminish/libs/DRList-1.0/DRList-1.0/*.toc"
+  - Diminish/libs/DRList-1.0/*.toc
+
+move-folders:
+  Diminish/Diminish_Options: Diminish_Options
+  Diminish/Diminish: Diminish
