@@ -223,6 +223,13 @@ for unitFrame, unit in pairs(NS.unitFrames) do
         -------------------------------------------------------------------
 
         do
+            local GetSpellTexture = function(...)
+                if _G.GetSpellTexture then
+                    return _G.GetSpellTexture(...)
+                elseif C_Spell and C_Spell.GetSpellTexture then
+                    return C_Spell.GetSpellTexture(...)
+                end
+            end
             local subCategories = Widgets:CreateSubHeader(panel, L.HEADER_CATEGORIES)
             subCategories:SetPoint("RIGHT", -64, 10)
 
@@ -245,7 +252,7 @@ for unitFrame, unit in pairs(NS.unitFrames) do
                         return
                     end
 
-                    local texture = C_Spell.GetSpellTexture(text)
+                    local texture = GetSpellTexture(text)
                     if texture then
                         DIMINISH_NS.db.categoryTextures[self.category] = texture
                     else
@@ -279,7 +286,7 @@ for unitFrame, unit in pairs(NS.unitFrames) do
                     frames.iconPreview:SetParent(nil)
                 end,
                 EditBoxOnTextChanged = function(editbox)
-                    local texture = C_Spell.GetSpellTexture(editbox:GetText())
+                    local texture = GetSpellTexture(editbox:GetText())
                     if texture then
                         frames.iconPreview.icon:SetTexture(texture)
                         editbox:GetParent().button1:Enable()
