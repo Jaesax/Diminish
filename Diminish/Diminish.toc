@@ -1,4 +1,4 @@
-## Interface: 110000, 110002
+## Interface: 110005
 ## IconTexture: Interface\Icons\Spell_nature_heavypolymorph1
 ## Title: |cff99ff33Diminish
 ## Notes: Lightweight diminishing returns tracker for hostile and friendly units.
